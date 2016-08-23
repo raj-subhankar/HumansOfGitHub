@@ -4,7 +4,7 @@ import {
   Text,
   View,
   TextInput,
-  TouchableHightlight,
+  TouchableHighlight,
   ActivityIndicatorIOS
 } from 'react-native';
 
@@ -63,8 +63,8 @@ class Main extends Component {
   }
   handleSubmit() {
     this.setState({
-      isLoading: true;
-    })
+      isLoading: true
+    });
   }
   handleChange(event) {
     this.setState({
@@ -79,14 +79,12 @@ class Main extends Component {
           style={styles.searchInput}
           value={this.state.username}
           onChange={this.handleChange.bind(this)} />
-          <TouchableHightlight
+          <TouchableHighlight
            style={styles.button}
            onPress={this.handleSubmit.bind(this)}
            underlayColor="white">
-           <Text style={styles.buttonText} SUBMIT </Text>
-           </TouchableHightlight>
-
-
+             <Text style={styles.buttonText}> SEARCH </Text>
+           </TouchableHighlight>
       </View>
     )
   }
