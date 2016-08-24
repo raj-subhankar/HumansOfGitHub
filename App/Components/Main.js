@@ -8,6 +8,8 @@ import {
   ActivityIndicatorIOS
 } from 'react-native';
 
+var api = require(../Utils/api);
+
 var styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -65,6 +67,26 @@ class Main extends Component {
     this.setState({
       isLoading: true
     });
+    api.getBio(this.state.username)
+      .then((res) => {
+        if(res.message === 'Not Found') {
+          this.setState({
+            isLoading: false,
+            error: 'User Not Found'
+          })
+        } else {
+          this.props.navigator.push({
+            title: res.name || "Select an option",
+            component: Dashboard,
+            passProps: {userInfo: res}
+          });
+          this.setState({
+            isLoading: false,
+            error: false,
+            username: ''
+          })
+        }
+      });
   }
   handleChange(event) {
     this.setState({
