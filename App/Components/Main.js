@@ -1,3 +1,6 @@
+var api = require('../../Utils/api');
+var Dashboard = require('./Dashboard');
+
 import React, {Component} from 'react';
 import {
   StyleSheet,
@@ -7,8 +10,6 @@ import {
   TouchableHighlight,
   ActivityIndicatorIOS
 } from 'react-native';
-
-var api = require(../Utils/api);
 
 var styles = StyleSheet.create({
   mainContainer: {
@@ -86,7 +87,8 @@ class Main extends Component {
             username: ''
           })
         }
-      });
+      })
+    .done();
   }
   handleChange(event) {
     this.setState({

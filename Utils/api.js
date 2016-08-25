@@ -3,7 +3,7 @@ var api = {
     username = username.toLowerCase().trim();
     var url = `https://github.com/users/${username}`;
     return fetch(url).then((res) => res.json());
-  }
+  },
   getRepos(username) {
     username = username.toLowerCase().trim();
     var url = `https://github.com/users/${username}/repos`;
