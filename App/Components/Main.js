@@ -87,8 +87,7 @@ class Main extends Component {
             username: ''
           })
         }
-      })
-    .done();
+      });
   }
   handleChange(event) {
     this.setState({
