@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 var Badge = require('./Badge');
 var Separator = require('./Helpers/Separator');
+var WebView = require('./Helpers/WebView');
 
 import {
   ScrollView,
@@ -37,7 +38,11 @@ var styles = StyleSheet.create({
 
 class Repositories extends Component {
   openPage(url) {
-    console.log(url);
+    this.props.navigator.push({
+      component: WebView,
+      title: 'Web View',
+      passProps: {url}
+    });
   }
   render() {
     var repos = this.props.repos;
