@@ -21,6 +21,6 @@ $ git checkout -b feature/readme-contributors
 ### Step 3: Pull Request
 When you want to get your changes into the original repository you send a pull request to the owner. That is done in as:
 ```
-$ git git push -u origin feature/readme-contributors
+$ git push -u origin feature/readme-contributors
 ```
 When you are done with this, you go to your forked repository in https://www.github.com, where you should see a button that says Compare & pull request. You click there and should the owner accept your changes, those you made will end up in the original repository.
