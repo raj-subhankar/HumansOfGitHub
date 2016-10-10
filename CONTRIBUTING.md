@@ -3,7 +3,7 @@
 In this guide I'll guide you through the steps to fork a repository, create a branch and push your changes to the main repo.
 
 ### Step 1: Copying the repo to your computer
-Firstly, press the fork button on the top-right of the project page. Next we are going to clone the repository into our computers typing the following in the Terminal:
+Firstly, press the fork button on the top-right of the project page. Next, we are going to clone the repository into our computers typing the following in the Terminal:
 ```sh
 $ git clone git@github.com:gtarraga/HumansOfGitHub.git
 ```
